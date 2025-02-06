@@ -3,47 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <link rel="stylesheet" href="style.css">
+    <title>Luxury Perfume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0d0d19;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(13, 13, 25, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4757;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff4757;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1620485435764-ba7b5ea3804f?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: #ff4757;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta:hover {
+            background: #d63447;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            color: #ff4757;
+        }
+
+        /* Footer */
+        footer {
+            background: #141a2e;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .social-icons i {
+            padding-top: 2%;
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons i:hover {
+            color: #ff4757;
+        }
+    </style>
 </head>
 <body>
-    <div id="main">
-        <div id="left">
-            <div id="lnav">
-                <i class="ri-arrow-left-line"></i>
-                <div id="lnavr">
-                    <a href="">HOME</a><a href="">Work</a>
-                    <i class="ri-twitter-fill"></i>
-                </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Perfume Luxe</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Luxury Fragrances for You</h1>
+        <p>Experience elegance in every drop</p>
+        <button class="cta">Shop Now</button>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Our Best Sellers</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1623742310401-d8057c3c43c8?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Perfume 1">
+                <h3>Classic Essence</h3>
+                <p>790</p>
             </div>
-            <div id="textcenter">
-                <h1>A Symphony of Scents
-                </h1>
-                <p>Embrace Every Moment
-                    Perfume is more than just a scent; it’s a way to express who you are. Whether you’re dressing up for a special occasion or enjoying a casual day out, our fragrances are designed to enhance every moment, leaving a trail of allure and elegance in your wake.</p>
-              
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1589782431327-ac8a63d965a2?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Perfume 2">
+                <h3>Coco Noir</h3>
+                <p>999</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1737916061048-5a288b8e9f26?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Perfume 3">
+                <h3>TERRE D'HERMÈS</h3>
+                <p>899</p>
             </div>
         </div>
-        <div id="right">
-                <div id="rtop">
-                <div id="rtopright"></div>
-                <div id="rtopleft"></div>
-                </div>
-        
-        <div id="rbottom"></div>
-        </div>
-    </div>
-    </div>
-    <footer> <div id="foot">
-        <h4><a href="(link)">Home</a></h4>
-        <h4><a href="(link)">Contact</a></h4>
-        <h4><a href="https://www.instagram.com/rohan_koli_5159/profilecard/?igsh=MWN4ZTJ5ZjVzbWczcw==">Instagram</a></h4>
-        <h4><a href="https://x.com/i/flow/login?redirect_after_login=%2FSuraj_koli18">Twitter</a></h4>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Perfume Luxe. All rights reserved.</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class=" fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
         </div>
     </footer>
+
+    <!-- GSAP Smooth Scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.from(".hero h1", { opacity: 0, y: -50, duration: 1 });
+        gsap.from(".hero p", { opacity: 0, y: 50, duration: 1, delay: 0.3 });
+        gsap.from(".cta", { opacity: 0, scale: 0.8, duration: 1, delay: 0.6 });
+
+        gsap.utils.toArray(".product").forEach(product => {
+            gsap.from(product, {
+                scrollTrigger: {
+                    trigger: product,
+                    start: "top 90%",
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1
+            });
+        });
+    </script>
+
 </body>
 </html>
+       
